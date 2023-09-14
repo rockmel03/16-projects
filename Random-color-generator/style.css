@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family:cursive;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+
+h1{
+    text-align: center;
+    margin : 20px 0;
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.color-container{
+    /* background-color: #7652a6; */
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    width: 300px;
+    height: 150px;
+    margin:5px;
+    font-size: 20px;
+    color: white;
+    border: 2px solid #0000;
+    border-radius: 10px ;
+    box-shadow: 0 4px 8px #00000080;
+
+}

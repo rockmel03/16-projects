@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Gilroy';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    background-color: #000;
+}
+.heart { 
+    pointer-events: none;
+    background:url('./heart.png');
+    background-size: cover;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    animation: anime 5s linear ;
+
+} 
+
+@keyframes anime {
+    
+    0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}

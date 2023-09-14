@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trailarCard {
+  padding: 10px;
+  width: 300px;
+  height: 450px;
+  background-color: rgb(17 17 21);
+  border-radius: 15px;
+  color: white;
+}
+.trailarCard img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.trailarCard h1 {
+  text-transform: capitalize;
+  margin: 5px 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+.trailarCard p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+.trailarCard .btn {
+  background-color: #ffff;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: orange;
+}
+.trailarContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+
+  display: None;
+  transition: all ease 1s;
+}
+.active.trailarContainer {
+  display: block;
+  opacity: 1;
+}
+.trailarContainer video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+}
+
+.trailarContainer #CloseBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 2.5vw;
+  color: #fff;
+}
+.trailarContainer #CloseBtn:hover {
+  color: #e28585;
+}
+@media (max-width: 991px) {
+  .trailarContainer video {
+    max-width: 90%;
+  }
+}

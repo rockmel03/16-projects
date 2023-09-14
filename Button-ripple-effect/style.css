@@ -1,0 +1,56 @@
+/* @import url(https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Gilroy';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+
+body{
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    height: 100vh;
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
+.btn{
+    overflow: hidden;
+    background-color: pink;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #00000092;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    font-weight: 700;
+}
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: var(--yPos);
+    left: var(--xPos);
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: orangered;
+
+    transition: width 0.5s, height 0.5s;
+
+}
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
